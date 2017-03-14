@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>抢票系统</title>	
+	<link rel="stylesheet" href="/static/css/style.css"><!--#在引用时，切记在第一个文件夹前加/否则无效，无需进行其他设置-->
+	<link rel="stylesheet" href="/static/dist/style/weui.css">
+	<script src="/static/js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<h1>{{title}}</h1>
+	
+	 <!--<div class='page'>
+    		<div class='weui_msg'>
+        	<div class='weui_icon_area'>
+        	<i class='weui_icon_warn weui_icon_msg'></i></div>
+        	<div class='weui_text_area'>
+            <h2 class='weui_msg_title'>很遗憾！</h2>
+            <p class='weui_msg_desc'>本次演出抢票活动已经结束</p>
+        </div>
+		-->
+	
+	<h2 id="title"></h2>
+	<br><br><br>
+	<form  method="post" accept-charset="utf-8" >
+    <div class="weui_cells_title">个人信息</div>
+		
+        <div class="weui_cells weui_cells_form">
+			
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">{{form.name.label_tag}}</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    {{form.name}}
+                </div>
+            </div>
+          
+            <div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">{{form.IdNumber.label_tag}}</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                   {{form.IdNumber}}
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">{{form.PhoneNumber.label_tag}}</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    {{form.PhoneNumber}}
+                </div>
+            </div>
+           
+         </div>
+     </div>  
+     <input type="submit" name="ok" value="抢票"  id="sure" class="weui_btn weui_btn_primary" >
+     </form>  
+    
+</div>
+
+</body>
+</html>
